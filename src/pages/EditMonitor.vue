@@ -71,11 +71,15 @@
                                         </option>
                                     </optgroup>
 
+                                    <!--
+                                    Hidden for now: Reason refer to Setting.vue
                                     <optgroup :label="$t('Custom Monitor Type')">
                                         <option value="browser">
                                             (Beta) HTTP(s) - Browser Engine (Chrome/Firefox)
                                         </option>
                                     </optgroup>
+                                </select>
+                                -->
                                 </select>
                             </div>
 
@@ -413,10 +417,6 @@
                             <div class="my-3">
                                 <tags-manager ref="tagsManager" :pre-selected-tags="monitor.tags"></tags-manager>
                             </div>
-
-                            <div class="mt-5 mb-1">
-                                <button id="monitor-submit-btn" class="btn btn-primary" type="submit" :disabled="processing">{{ $t("Save") }}</button>
-                            </div>
                         </div>
 
                         <div class="col-md-6">
@@ -605,6 +605,10 @@
                                     </div>
                                 </template>
                             </template>
+                        </div>
+
+                        <div class="col-md-12 mt-5 mb-1">
+                            <button id="monitor-submit-btn" class="btn btn-primary" type="submit" :disabled="processing">{{ $t("Save") }}</button>
                         </div>
                     </div>
                 </div>
